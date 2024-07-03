@@ -10,8 +10,16 @@ void pattern(int n) {
         }
 
         // characters
+        char ch = 'A';
+        int breakpoint = (2*i-1)/2;
         for (int j = 1; j <= 2*i-1; j++){
-            cout << "*";
+            if(j <= breakpoint){
+                cout << ch;
+                ch = ch+1;
+            } else {
+                cout << ch;
+                ch = ch-1;
+            }
         }
 
         // spaces
